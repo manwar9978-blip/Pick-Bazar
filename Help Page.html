@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offers & FAQ - PickBazar</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ========== GENERAL ========== */
+      :root {
+        --primary-green: #0aad0a;
+        --primary-blue: #007bff;
+        --text-dark: #1f2937;
+        --text-muted: #6b7280;
+        --bg-light: #f5f6f8;
+        --border-color: #e5e7eb;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: var(--bg-light);
+        color: var(--text-dark);
+      }
+
+      /* ========== NAVBAR ========== */
+      .navbar {
+        background: #ffffff;
+        padding: 10px 40px;
+        border-bottom: 1px solid #e6e6e6;
+      }
+
+      .navbar-brand {
+        font-weight: 700;
+        color: var(--primary-green) !important;
+      }
+
+      .nav-link {
+        font-size: 14px;
+        color: #333 !important;
+      }
+
+      .btn-seller {
+        background: var(--primary-green);
+        color: white;
+        font-size: 13px;
+        padding: 6px 14px;
+        border: none;
+        border-radius: 4px;
+      }
+
+      /* ========== HERO ========== */
+      .hero {
+        background: #d9dee5;
+        padding: 60px 0;
+        text-align: center;
+      }
+
+      .hero h2 {
+        font-weight: 600;
+      }
+
+      .breadcrumb {
+        justify-content: center;
+        background: transparent;
+        font-size: 13px;
+      }
+
+      /* ========== FAQ SECTION ========== */
+      .faq-section {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      details {
+        background-color: #ffffff;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        overflow: hidden;
+      }
+
+      details:hover {
+        border-color: var(--primary-blue);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+
+      summary {
+        list-style: none;
+        padding: 20px;
+        font-weight: 600;
+        font-size: 15px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+      }
+
+      summary::-webkit-details-marker {
+        display: none;
+      }
+
+      summary::before {
+        content: "+";
+        width: 20px;
+        color: var(--primary-blue);
+        font-size: 20px;
+        margin-right: 15px;
+        font-weight: bold;
+      }
+
+      details[open] summary::before {
+        content: "−";
+      }
+
+      .content {
+        padding: 0 20px 20px 55px;
+        font-size: 14px;
+        line-height: 1.6;
+        color: var(--text-muted);
+        border-top: 1px solid var(--border-color);
+        padding-top: 20px;
+      }
+
+      /* ========== FLOATING CART ========== */
+      .cart-float {
+        position: fixed;
+        right: 20px;
+        top: 50%;
+        background: var(--primary-green);
+        color: white;
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 12px;
+        z-index: 1000;
+      }
+
+      /* ========== FOOTER ========== */
+      .footer {
+        background: #f1f2f4;
+        padding: 60px 0 30px;
+        font-size: 13px;
+      }
+
+      .footer h6 {
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      .footer a {
+        display: block;
+        text-decoration: none;
+        color: #555;
+        margin-bottom: 8px;
+      }
+
+      .footer a:hover {
+        color: var(--primary-green);
+      }
+
+      .subscribe-box input {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-3">
+        <img src="images/Logo-new.webp" alt="" />
+        <button class="btn btn-outline-success btn-sm">Grocery</button>
+      </div>
+
+      <div class="d-flex align-items-center gap-3">
+        <a class="nav-link" href="#">Shops</a>
+        <a class="nav-link" href="#">Offers</a>
+        <a class="nav-link" href="#">Contact</a>
+        <a class="nav-link" href="#">Pages</a>
+        <button class="btn btn-success btn-sm">Join</button>
+        <button class="btn-seller">Become a Seller</button>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <h2>Offers & Help</h2>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">Home</li>
+          <li class="breadcrumb-item active">Offers</li>
+        </ol>
+      </nav>
+    </section>
+
+    <div class="faq-section">
+      <details open>
+        <summary>What email systems (ESPs) does Postcards work with?</summary>
+        <div class="content">
+          We have tested Postcards with Gmail, AOL, Apple Mail, Outlook, and
+          major systems like Mailchimp, Shopify, and Salesforce.
+        </div>
+      </details>
+
+      <details>
+        <summary>Do you plan on adding more blocks?</summary>
+        <div class="content">
+          Yes, we regularly update our library with new design blocks based on
+          user feedback.
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          Are there any limits to the number of exported emails from Postcards?
+        </summary>
+        <div class="content">
+          For the Pro plan, there are no limits on the number of exported
+          emails, allowing you to export as many as you need. However, the Plus
+          plan does have a restriction, with a maximum of 20 exports per month.
+        </div>
+      </details>
+
+      <details open>
+        <summary>What email systems (ESPs) does Postcards work with?</summary>
+        <div class="content">
+          We have tested Postcards with Gmail, AOL, Apple Mail, Outlook, and
+          major systems like Mailchimp, Shopify, and Salesforce.
+        </div>
+      </details>
+
+      <details>
+        <summary>Do you provide any support?</summary>
+        <div class="content">
+          Yes! We can help you out with any question related to Postcards if you
+          have an active license. Customer support is available here.
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          Is there a way to become an Affiliate reseller of Postcards?
+        </summary>
+        <div class="content">
+          Yes, you can earn 25% of Postcards’ Price if you bring us a new
+          customer. You can do it here.
+        </div>
+      </details>
+
+      <details open>
+        <summary>
+          Why do my custom fonts look different when I send them?
+        </summary>
+        <div class="content">
+          As far as we know, not all email clients offer universal support for
+          web fonts. If a web font is not supported by an email client, it is
+          changed to a fallback font that will be seen instead. In most cases,
+          the fallback fonts are Helvetica, Arial, or a generic sans serif font.
+          Lately, iOS mail clients override web fonts with their own font – San
+          Francisco.
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          Can I edit contents (images, text, layout) of the email?
+        </summary>
+        <div class="content">
+          Yes! You can edit content online, using the online editor. We’re also
+          planning on adding the new features of editing contents..
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          Is there any difference between Plus and Pro licenses?
+        </summary>
+        <div class="content">
+          The Plus license allows you to create as many emails as you want, but
+          for only one brand. If you’d want to create emails for a number of
+          brands, we recommend that you upgrade to the Pro plan.
+        </div>
+      </details>
+
+      <details open>
+        <summary>
+          What would happen if I choose not to pay for the License Extension
+          after a month/year of usage?
+        </summary>
+        <div class="content">
+          All Licenses are issued for a term for a calendar month/year from the
+          date of purchase. If you decide to discontinue payments, the access to
+          the Postcards Generator will no longer be possible, and any support
+          from Designmodo regarding Postcards will not be available. After
+          license cancellation, you still can use the emails that were generated
+          within the License Term.
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          Can I use Postcards Generator with no connection to the Internet
+          (offline)?
+        </summary>
+        <div class="content">
+          You can open and edit the results of export on your computer without
+          internet connection. But Postcards Generator will be only available
+          online mode.
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          Can I install a version of Postcards on my own server and provide
+          access to it for my clients?
+        </summary>
+        <div class="content">
+          Access to Postcards is only available at this link
+          https://designmodo.com/postcards/app/.
+        </div>
+      </details>
+
+      <details open>
+        <summary>What email systems (ESPs) does Postcards work with?</summary>
+        <div class="content">
+          We have tested Postcards with Gmail, AOL, Apple Mail, Outlook, and
+          major systems like Mailchimp, Shopify, and Salesforce.
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I request a refund?</summary>
+        <div class="content">
+          Sure, we can offer a refund if you can provide the proof that
+          Postcards doesn’t work. We decided to offer a Free version for anyone
+          to test our features and code out before purchasing Postcards.
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          How do I send Postcards templates through email using Outlook?
+        </summary>
+        <div class="content">
+          If you're using Outlook, you can also send Postcards templates through
+          email with the help of the Insert HTML by Designmodo plugin, available
+          on the Microsoft AppSource website.
+        </div>
+      </details>
+    </div>
+
+    <div class="cart-float">
+      0 Items<br />
+      $0.00
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="images/Logo-new.webp" alt="" />
+            <p>
+              NY State Thruway, New York, USA<br />demo@demo.com<br />+129290122122
+            </p>
+          </div>
+
+          <div class="col-md-2">
+            <h6>Explore</h6>
+            <a href="#">Shops</a>
+            <a href="#">Authors</a>
+            <a href="#">Flash Deals</a>
+            <a href="#">Coupon</a>
+          </div>
+
+          <div class="col-md-2">
+            <h6>Customer Service</h6>
+            <a href="#">FAQ & Helps</a>
+            <a href="#">Vendor Refund Policies</a>
+          </div>
+
+          <div class="col-md-2">
+            <h6>Our Information</h6>
+            <a href="#">Manufacturers</a>
+            <a href="#">Privacy policies</a>
+          </div>
+
+          <div class="col-md-3">
+            <h6>Subscribe Now</h6>
+            <p>Subscribe for newsletter and news based on your interest</p>
+            <div class="subscribe-box">
+              <input type="email" placeholder="Write your email here" />
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-5 text-center text-secondary border-top pt-3"
+          style="font-size: 12px"
+        >
+          © 2026 Pickbazar. Copyright © REDQ. All rights reserved worldwide.
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
